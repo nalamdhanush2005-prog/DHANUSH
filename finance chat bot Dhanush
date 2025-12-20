@@ -1,0 +1,53 @@
+def show_menu():
+    print("\n💰 Finance Chatbot Menu")
+    print("1. Budgeting Tips")
+    print("2. Savings Advice")
+    print("3. Simple Interest Calculator")
+    print("4. Loan Guidance")
+    print("5. Exit")
+
+def budgeting():
+    print("\n📊 Budgeting Tip:")
+    print("Follow the 50-30-20 rule:")
+    print("50% Needs | 30% Wants | 20% Savings")
+
+def savings():
+    print("\n💵 Savings Advice:")
+    print("Save at least 20% of your monthly income.")
+    print("Keep an emergency fund for 6 months.")
+
+def simple_interest():
+    p = float(input("Enter Principal Amount (₹): "))
+    r = float(input("Enter Rate of Interest (%): "))
+    t = float(input("Enter Time (years): "))
+    si = (p * r * t) / 100
+    print(f"Simple Interest = ₹{si}")
+
+def loan():
+    print("\n🏦 Loan Guidance:")
+    print("• Choose low interest rates")
+    print("• Shorter tenure reduces total interest")
+    print("• Avoid unnecessary loans")
+
+def finance_chatbot():
+    print("🤖 Welcome to Finance Chatbot")
+
+    while True:
+        show_menu()
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            budgeting()
+        elif choice == "2":
+            savings()
+        elif choice == "3":
+            simple_interest()
+        elif choice == "4":
+            loan()
+        elif choice == "5":
+            print("Thank you for using Finance Chatbot 😊")
+            break
+        else:
+            print("Invalid choice. Try again.")
+
+finance_chatbot()
